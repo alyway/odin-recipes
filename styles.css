@@ -1,0 +1,19 @@
+/* Body Styles */
+html {box-sizing: border-box;}
+*, *:before, *:after{box-sizing: inherit;}
+body{font-family: 'Montserrat', sans-serif ;}
+
+
+/* Header Styles */
+h1{font-weight: 900;}
+
+
+
+/* Simple Responsive Grid */
+.main-grid{width: 98%; margin:auto;}
+@media screen and (min-width:800px) {
+    .main-grid{width:88%;}  
+}
+@media screen and (min-width:1600px) {
+    .main-grid{width:78%;}  
+}
