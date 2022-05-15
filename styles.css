@@ -1,34 +1,49 @@
 /* Body Styles */
 html {box-sizing: border-box;}
 *, *:before, *:after{box-sizing: inherit;}
-body{font-family: 'Montserrat', sans-serif ;}
+ul{margin-inline-start: 0; padding-inline-start: 0;}
+body{font-family: 'Montserrat', sans-serif ; background: #f6f6f6; color:#111;}
 
 /* Header Styles */
-h1, h2, h3{font-weight: 900;}
-
+h1, h2{font-weight: 900;}
+h2{margin: 0; font-size: 1.2em;}
+h3, b{font-size: 1em; font-weight: 700;}
 
 /* Recipe Links */
 .recipe-list{display: flex; flex-wrap: wrap;}
-.recipe-link{margin:10px; width: 100%; height:400px; position: relative; background:#111; }
+.recipe-link{margin:10px; width: 100%; height:400px; position: relative; background:#111; border-radius: 5px; }
 .link-image{width:100%; height:100%; overflow: hidden;}
-.link-image img{width:100%; height:100%; object-fit: cover; object-position: center; opacity: .7; -webkit-transition: .3s ease-in-out; transition: .3s ease-in-out;  -webkit-transform: scale(1); transform: scale(1);}
-.link-image:hover img{opacity: .5; -webkit-transform: scale(1.3); transform: scale(1.3);}
+.link-image img{width:100%; height:100%; object-fit: cover; object-position: center; opacity: .7; -webkit-transition: .3s ease-in-out; transition: .3s ease-in-out;  -webkit-transform: scale(1); transform: scale(1); }
+.link-image:hover img{opacity: .5; -webkit-transform: scale(1.3); transform: scale(1.3); }
 .text-overlay{position: absolute; bottom:30px; left:30px; font-weight:700; color:#fff; font-size: 1.5em; }
 
 /* Recipe Page */
-.recipe-contents{display: flex; flex-wrap: wrap;}
-.col1 img{width:100%;}
+.recipe-contents{display: flex; flex-wrap: wrap; max-width: 1000px; margin: auto;}
+.col2 img{width:100%; height: 350px; object-fit: cover; border-radius: 5px;}
+ul li{padding:10px 0;}
+ul{margin:0 0 20px 0;}
+ol li{padding:20px 0;}
+.col1 ul li{list-style: none; display:inline; padding:10 0 20px 0;}
+.col1 ul li::after{content: ' | ';}
+.col1 ul li:last-child:after{content: ' ';}
+.col3 ul li{list-style: none;}
+hr{height:1px; background: #999; width:100%; margin:20px 0;}
+.col4 li::marker{font-size: 1.1em; font-weight: 700;}
 
-/* Super Simple Responsive Grid */
+
+
+/* Simple Responsive Grid */
 .main-grid{width: 98%; margin:auto;}
-.col1, .col2{width:100%;}
+.col1, .col2, .col3, .col4{width:100%;}
 
 @media screen and (min-width:800px) {
     .main-grid{width:88%;} 
     .recipe-link {width: calc((100% / 2) - 20px); height:400px;  }
-    .col1, .col2{margin:1em;}
-    .col1{width: calc(30% - 2em);}
-    .col2{width: calc(70% - 2em);}
+    .col1, .col2, .col3, .col4{margin:1em;}
+    .col1{width: calc(60% - 2em);}
+    .col2{width: calc(40% - 2em);}
+    .col3{width: calc(30% - 2em);}
+    .col4{width: calc(70% - 2em);}
 }
 @media screen and (min-width:1400px) {
     .main-grid{width:78%;}
